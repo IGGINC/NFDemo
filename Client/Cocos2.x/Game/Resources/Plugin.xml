@@ -1,0 +1,9 @@
+<XML>
+	<GameClient>
+		<Plugin Name="NFKernelPlugin" />
+		<Plugin Name="NFConfigPlugin" />
+		<Plugin Name="NFLogPlugin" />
+		<Plugin Name="NFGameXPlugin" />
+    		<ConfigPath Name="" />		
+	</GameClient>
+</XML>

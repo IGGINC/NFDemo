@@ -27,3 +27,12 @@
 *.exe
 *.out
 *.app
+
+/Client/Cocos2.x/cocos2d
+/NoahGameFrame
+/Client/Cocos2.x/Game/proj.win32/ipch
+/Client/Cocos2.x/Game/proj.win32/Debug.win32
+/Client/Cocos2.x/Game/proj.win32/_Out
+/Client/Cocos2.x/Game/proj.win32/Temp
+/Client/Cocos2.x/Game/proj.win32/*.opensdf
+/Client/Cocos2.x/Game/proj.win32/*.sdf
