@@ -1,0 +1,17 @@
+<CCLayerColor tag="1" color="#000000" opacity="255" position="{0, 0}">
+    <CCSprite tag="0" displayFrame="load_bk.jpg" color="#ffffff" opacity="255" position="{528.156738, 329.467651}" scale="{1.200000, 1.200000}">
+        <CCScale9Sprite tag="0" position="{159.503677, 2.496643}" spriteFrame="frame_head_selected.png" contentSize="{300,  300}" preferedSize="{740.000000, 340.000000}">
+            <CCLabelBMFont tag="0" color="#ffffff" opacity="255" string="EditBox" fntFile="Abadi40-hd.fnt" position="{153.723801, 266.563843}"/>
+            <CCEditBox tag="0" position="{349.200073, 156.248627}" fontSize="40" fontName="微软雅黑" fontColor="#ffffff" placeholder="输入文本" placeholderFont="宋体" placeholderFontSize="40" placeholderFontColor="#777777" inputMode="SingleLine" inputFlag="InitialCapsAllCharacters" maxLength="0" preferedSize="{500.000000, 40.000000}"/>
+        </CCScale9Sprite>
+    </CCSprite>
+    <CCScale9Sprite tag="0" position="{1.641281, 346.062897}" spriteFrame="scale9sprite.png" contentSize="{600.000000, 300.000000}" preferedSize="{600.000000, 300.000000}">
+        <CCLabelTTF tag="0" color="#ff00ff" opacity="255" fontName="宋体" fontSize="40" string="按钮控件" verticalAlignment="Center" horizontalAlignment="Center" dimensions="{0, 0}" position="{110.774376, 253.577576}"/>
+        <CCMenu tag="0" contentSize="{250.000000, 200.000000}" position="{30.640671, 45.386139}">
+            <CCMenuItemImage tag="0" normalSpriteFrame="Info.png" selectedSpriteFrame="Info_gray.png" disabledSpriteFrame="Info_gray.png" isEnabled="true" position="{38.928150, 147.805725}"/>
+            <CCMenuItemImage tag="0" normalSpriteFrame="Info.png" selectedSpriteFrame="Info.png" disabledSpriteFrame="Info_gray.png" isEnabled="false" position="{124.806274, 148.802979}"/>
+            <CCMenuItemImage tag="0" normalSpriteFrame="btn_orange.png" selectedSpriteFrame="btn_orange_m.png" disabledSpriteFrame="default_sprite.png" isEnabled="true" position="{122.826126, 45.938843}"/>
+        </CCMenu>
+        <CCControlButton tag="0" position="{416.088959, 161.197327}" zoomOnTouchDown="false" title_1="九切片按钮(普通)" title_2="九切片按钮(高亮)" title_3="九切片按钮(失效)" backgroundSpriteFrame_1="frame_head.png" backgroundSpriteFrame_2="frame_head_selected.png" preferedSize="{200.000000, 205.000000}" titleTTFSize_1="24" titleTTFSize_2="24" titleTTFSize_3="24" titleTTF_1="微软雅黑" titleTTF_2="微软雅黑" titleTTF_3="微软雅黑"/>
+    </CCScale9Sprite>
+</CCLayerColor>

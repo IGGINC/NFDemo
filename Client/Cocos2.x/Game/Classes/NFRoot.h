@@ -2,10 +2,18 @@
 #define __NFRoot_H__
 
 #include "cocos2d.h"
+#include "NFComm/NFCore/NFSingleton.hpp"
 
-class NFRoot : public cocos2d::CCNode
+class NFRoot : public cocos2d::CCNode, public NFSingleton<NFRoot>
 {
 public:
+	enum IndexZOrder
+	{
+		eIZO_Scene = 0,
+        eIZO_UI,
+        eIZO_WebView,
+	};
+
 	NFRoot();
 	~NFRoot();
     virtual bool init();  

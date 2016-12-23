@@ -76,11 +76,12 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4482;4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ForcedIncludeFiles>StdAfx.h</ForcedIncludeFiles>
+      <AdditionalOptions>-Zm158 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libExtensions.lib;libcocos2d.lib;libCocosDenshion.lib;opengl32.lib;glew32.lib;libBox2d.lib;libchipmunk.lib;libcurl_imp.lib;pthreadVCE2.lib;websockets.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -133,22 +134,106 @@ xcopy /Y /Q "$(ProjectDir)..\..\cocos2d\external\libwebsockets\win32\lib\*.*" "$
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFCClassModule.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFCElementModule.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFConfigPlugin.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCalendar.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCComponentManager.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCDataList.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCMemManager.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCObject.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCProperty.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCPropertyManager.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCRecord.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCRecordManager.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFMemoryCounter.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCEventModule.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCKernelModule.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCSceneAOIModule.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCScheduleModule.cpp" />
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFLogPlugin\NFCLogModule.cpp" />
     <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFPluginLoader\NFCDynLib.cpp" />
     <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFPluginLoader\NFCPluginManager.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\Logic\LogicBase.cpp" />
+    <ClCompile Include="..\Classes\Logic\LoginLogic.cpp" />
+    <ClCompile Include="..\Classes\Logic\NetLogic.cpp" />
+    <ClCompile Include="..\Classes\NFGamePlugin.cpp" />
     <ClCompile Include="..\Classes\NFRoot.cpp" />
+    <ClCompile Include="..\Classes\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UIDemoLogin.cpp" />
+    <ClCompile Include="..\Classes\UI\UIDialog.cpp" />
+    <ClCompile Include="..\Classes\UI\UIManager.cpp" />
+    <ClCompile Include="..\Classes\UI\UISelectWorld.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFCClassModule.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFCElementModule.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFConfigPlugin.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFBox.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCalendar.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCComponentManager.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCConsistentHash.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCDataList.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCMemManager.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCObject.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCProperty.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCPropertyManager.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCRecord.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCRecordManager.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIComponent.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIComponentManager.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIDataList.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIObject.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIProperty.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIPropertyManager.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIRecord.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIRecordManager.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFLine.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFList.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFMapEx.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFMemoryCounter.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFPlane.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFRay.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFSpaceNode.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFSphere.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFVector2.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFVector3.hpp" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCEventModule.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCKernelModule.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCSceneAOIModule.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCScheduleModule.h" />
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFLogPlugin\NFCLogModule.h" />
     <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFPluginLoader\NFCDynLib.h" />
     <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFPluginLoader\NFCPluginManager.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\Logic\LogicBase.h" />
+    <ClInclude Include="..\Classes\Logic\LoginLogic.h" />
+    <ClInclude Include="..\Classes\Logic\NetLogic.h" />
+    <ClInclude Include="..\Classes\NFGamePlugin.h" />
     <ClInclude Include="..\Classes\NFRoot.h" />
+    <ClInclude Include="..\Classes\stdafx.h" />
+    <ClInclude Include="..\Classes\UI\UIDemoLogin.h" />
+    <ClInclude Include="..\Classes\UI\UIDialog.h" />
+    <ClInclude Include="..\Classes\UI\UIManager.h" />
+    <ClInclude Include="..\Classes\UI\UISelectWorld.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Common\NFMessageDefine\NFMessageDefine.vcxproj">
+      <Project>{3d9db426-ba46-450b-bbac-dabb6b6d69de}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\NoahGameFrame\Dependencies\protobuf\vsprojects\libprotobuf.vcxproj">
+      <Project>{3e283f37-a4ed-41b7-a3e6-a2d89d131a30}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\NoahGameFrame\NFComm\NFNet\NFNet.vcxproj">
+      <Project>{403eb74f-6af5-4250-8da5-9d3cbfb7e545}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\..\cocos2d\cocos2dx\proj.win32\cocos2d.vcxproj">
       <Project>{98a51ba8-fc3a-415b-ac8f-8c7bd464e93e}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

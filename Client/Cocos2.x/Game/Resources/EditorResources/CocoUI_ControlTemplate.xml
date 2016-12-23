@@ -1,0 +1,53 @@
+<CCLayer>
+  <CCNode MenuName="常用">
+    <CCNode MenuPos="false" MenuName="节点(CCNode)" />
+    <CCSprite MenuPos="true" MenuName="图片(CCSprite)" displayFrame="default_sprite.png"/>
+    <HueSprite MenuPos="true" MenuName="可调色值图片(HueSprite)" hue="0" displayFrame="default_sprite.png"/>
+    <CCLabelTTF MenuPos="true" MenuName="文本(CCLabelTTF)" string="NewText" />
+    <CCScale9Sprite MenuPos="true" MenuName="九切片(CCScale9Sprite)" spriteFrame="textbg1.png" contentSize="{300,  300}"/>
+    <CCControlButton MenuPos="true" MenuName="九切按钮(CCControlButton)" title_1="State1"backgroundSpriteFrame_1="default_sprite.png"/>
+    <CCEditBox MenuPos="true" MenuName="输入框(CCEditBox)"/>
+    <RichTextLabel MenuPos="true" MenuName="富文本(RichTextLabel)" string="NewText"/>
+    <CCScrollView MenuPos="true" MenuName="滾動視圖(CCScrollView)" contentSize="{200,  200}"/>
+    <ClippingNode MenuPos="true" MenuName="裁剪节点(ClippingNode)" stencilFrame="default_sprite.png"/>
+  </CCNode>
+  <CCLayer MenuPos="false" MenuName="层(CCLayer)" touchEnabled="false" />
+  <CCLayerColor MenuPos="false" MenuName="颜色层(CCLayerColor)"/>
+  <CCLayerGradient MenuPos="false" MenuName="渐变图层(CCLayerGradient)"/>
+  <CCMenu MenuPos="true" MenuName="菜单(CCMenu)" contentSize="{200,  100}"/>
+  <CCMenuItemImage MenuPos="true"  MenuName="菜单项(CCMenuItemImage)" normalSpriteFrame="default_sprite.png"/>
+  <CCLabelBMFont MenuPos="true"  MenuName="位图字体(CCLabelBMFont)" string="Text LabelBMFont" fntFile="defaultBMFont.fnt"/>
+  <CCParticleSystemQuad MenuPos="true" MenuName="粒子(CCParticleSystemQuad)" tag="0" texture="default_sprite.png" startColor="{1.000000, 1.000000, 1.000000, 1.000000}"life="{0.400000, 0.000000}" startSize="{100.000000, 0.000000}" endSize="{10.000000, 0.000000}" duration="-1" emissionRate="100" contentSize="{10.000000, 10.000000}" totalParticles="100"/>
+  <CCNode MenuName="CocoStudio">
+    <UIWidget MenuPos="true" MenuName="Widget(UIWidget)" contentSize="{200,  200}"/>
+    <UIButton MenuPos="true" MenuName="按钮(UIButton)" normalData="Button_Normal.png"/>
+    <UIRadioButton MenuPos="true" MenuName="單选按鈕(UIRadioButton)" backGroundBoxData="CheckBox_Normal.png" backGroundBoxSelectedData="CheckBox_Press.png" frontCrossData="CheckBoxNode_Normal.png" backGroundBoxDisabledData="CheckBox_Disable.png" frontCrossDisabledData="CheckBoxNode_Disable.png"/>
+    <UIRadioButtonGroup MenuPos="true" MenuName="單选按鈕组(UIRadioButtonGroup)" contentSize="{200,  200}"/>
+    <UICheckBox MenuPos="true" MenuName="复选框(UICheckBox)" backGroundBoxData="CheckBox_Normal.png" backGroundBoxSelectedData="CheckBox_Press.png" frontCrossData="CheckBoxNode_Normal.png" backGroundBoxDisabledData="CheckBox_Disable.png" frontCrossDisabledData="CheckBoxNode_Disable.png"/>
+    <UIImageView MenuPos="true" MenuName="图片(UIImageView)" fileNameData="ImageFile.png"/>
+    <UISlider MenuPos="true" MenuName="滑动条(UISlider)" barFileNameData="Slider_Back.png" ballNormalData="SliderNode_Normal.png" ballPressedData="SliderNode_Press.png" ballDisabledData="SliderNode_Disable.png" progressBarData="Slider_PressBar.png"/>
+    <UIText MenuPos="true" MenuName="文本(UIText)" ignoreSize="true" fontSize="20" string="Text Label" />
+    <UITextAtlas MenuPos="true" MenuName="文本图集(UITextAtlas)" charMapFileData="TextAtlas.png" itemSize="{14, 18}" string="8" startCharMap="./0123456789"/>
+    <UITextBMFont MenuPos="true" MenuName="位图文本(UITextBMFont)" fntFile="defaultBMFont.fnt" string="Text Label" />
+    <CCTMXTiledMap MenuPos="true" MenuName="瓦片地图(CCTMXTiledMap)" fileName="defaultMap.tmx"/>
+    <UIDiamondWidget MenuPos="true" MenuName="菱形按钮(UIDiamondWidget)" contentSize="{300,  150}"/>
+    <UILayout MenuPos="true" MenuName="佈局控件(UILayout)" contentSize="{200,  200}"/>
+    <UIScrollView MenuPos="true" MenuName="滾動視圖(ui::ScrollView)" contentSize="{200,  200}"/>
+    <UIListView MenuPos="true" MenuName="列表(ui::ListView)" contentSize="{200,  200}"/>
+    <UIPageView MenuPos="true" MenuName="页視圖(ui::PageView)" contentSize="{300,  300}"/>
+    <UITextField MenuPos="true" MenuName="輸入文本(ui::TextField)" contentSize="{300,  60}"/>
+    <CCEditBox MenuPos="true" MenuName="输入框(ui::EditBox)" fontSize="20" fontName="Helvetica" fontColor="#ffffff" placeholder="" placeholderFont="Helvetica" placeholderFontSize="20" placeholderFontColor="#777777" inputMode="SingleLine" inputFlag="InitialCapsAllCharacters"/> 
+    <UILoadingBar MenuPos="true" MenuName="进度条(UILoadingBar)" direction="Left" textureData="LoadingBarFile.png"/>
+   <ProgressTimer MenuPos="true" MenuName="圆形进度条(ProgressTimer)" displayFrame="default_sprite.png" type="Radial" percentage="100"/>
+    <RepeatProgressBar MenuPos="true" MenuName="图片进度条(RepeatProgressBar)" frontFrame="default_sprite.png" maxValue="5" curValue="3"/>
+    <UIRichTextView  MenuPos="true" MenuName="富文本(UIRichTextView)" ignoreSize="true" fontSize="20" fontColor="#ffffff" contentSize="{300,  300}" string="1" />
+    <UIWrapImage  MenuPos="true" MenuName="平铺(UIWrapView)" fileNameData="BD_5.png" ignoreSize="false" fontSize="20" fontColor="#ffffff" contentSize="{300,  300}" string="1" />
+    <RepeatSprite MenuPos="true" MenuName="图片列表(RepeatSprite)" displayFrame="default_sprite.png" repeatCount="5" direction="{1,0}"/>
+    <ArcMaskNode MenuPos="true" MenuName="圆形遮罩(ArcMaskNode)" maskFrame="lordMask.png" displayFrame="lord01.png" />
+   </CCNode>
+  <CCNode MenuName="遊戲">
+    <UIDialogBack MenuName="通用对话框底板(UIDialogBack)" titleString="标题" contentSize="{960,  640}" realPosition="{0.5, 0.5}" position="{-320, -320}"/>
+  </CCNode>
+  <CCNode MenuName="策划">
+    </CCNode>
+</CCLayer>

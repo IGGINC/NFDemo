@@ -13,6 +13,36 @@
     <Filter Include="NFCommon\NFPluginLoader">
       <UniqueIdentifier>{3712bf73-192d-433e-b311-71b1b9e6b013}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NFCommon\NFCore">
+      <UniqueIdentifier>{785234c8-8bfb-4ad9-9f46-0fa3c1ff22a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFCommon\NFLogPlugin">
+      <UniqueIdentifier>{4b8255d7-49f6-4477-9588-c9942524da95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFCommon\NFConfigPlugin">
+      <UniqueIdentifier>{d8886347-fed5-45f3-bea5-8512b613f480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFCommon\NFKernelPlugin">
+      <UniqueIdentifier>{4ca76be3-817f-4509-bf2e-1815cc06d513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFCommon\NFCore\Header Files">
+      <UniqueIdentifier>{3495cdd9-0ae2-4aee-909e-e6fa7b3c4027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFCommon\NFCore\Unit">
+      <UniqueIdentifier>{1dcd5556-da04-4ebf-8c9b-3466e70049bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFCommon\NFCore\Math">
+      <UniqueIdentifier>{50705dec-5b5b-4715-a15a-6b7b4f7366be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="NFCommon\NFCore\Source Files">
+      <UniqueIdentifier>{94ab1fb5-7a26-4a07-8f85-403711973338}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\UI">
+      <UniqueIdentifier>{def42042-28ac-422d-9bd0-1658fdef5d95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Logic">
+      <UniqueIdentifier>{6018038c-85c3-4cf4-835d-f80d99f0095f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,6 +63,87 @@
     <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFPluginLoader\NFCPluginManager.cpp">
       <Filter>NFCommon\NFPluginLoader</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFCClassModule.cpp">
+      <Filter>NFCommon\NFConfigPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFCElementModule.cpp">
+      <Filter>NFCommon\NFConfigPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFConfigPlugin.cpp">
+      <Filter>NFCommon\NFConfigPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCEventModule.cpp">
+      <Filter>NFCommon\NFKernelPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCKernelModule.cpp">
+      <Filter>NFCommon\NFKernelPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCSceneAOIModule.cpp">
+      <Filter>NFCommon\NFKernelPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCScheduleModule.cpp">
+      <Filter>NFCommon\NFKernelPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCalendar.cpp">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCDataList.cpp">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCMemManager.cpp">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFMemoryCounter.cpp">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCComponentManager.cpp">
+      <Filter>NFCommon\NFCore\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCObject.cpp">
+      <Filter>NFCommon\NFCore\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCProperty.cpp">
+      <Filter>NFCommon\NFCore\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCPropertyManager.cpp">
+      <Filter>NFCommon\NFCore\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCRecordManager.cpp">
+      <Filter>NFCommon\NFCore\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCRecord.cpp">
+      <Filter>NFCommon\NFCore\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\NoahGameFrame\NFComm\NFLogPlugin\NFCLogModule.cpp">
+      <Filter>NFCommon\NFLogPlugin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UIDemoLogin.cpp">
+      <Filter>Classes\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UIDialog.cpp">
+      <Filter>Classes\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\stdafx.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UIManager.cpp">
+      <Filter>Classes\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\NFGamePlugin.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Logic\LoginLogic.cpp">
+      <Filter>Classes\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UI\UISelectWorld.cpp">
+      <Filter>Classes\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Logic\NetLogic.cpp">
+      <Filter>Classes\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Logic\LogicBase.cpp">
+      <Filter>Classes\Logic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -52,6 +163,144 @@
     </ClInclude>
     <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFPluginLoader\NFCDynLib.h">
       <Filter>NFCommon\NFPluginLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFConfigPlugin.h">
+      <Filter>NFCommon\NFConfigPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFCClassModule.h">
+      <Filter>NFCommon\NFConfigPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFConfigPlugin\NFCElementModule.h">
+      <Filter>NFCommon\NFConfigPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCScheduleModule.h">
+      <Filter>NFCommon\NFKernelPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCEventModule.h">
+      <Filter>NFCommon\NFKernelPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCKernelModule.h">
+      <Filter>NFCommon\NFKernelPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFKernelPlugin\NFCSceneAOIModule.h">
+      <Filter>NFCommon\NFKernelPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCComponentManager.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCObject.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCProperty.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCPropertyManager.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCRecordManager.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIComponent.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIComponentManager.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCRecord.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIObject.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIProperty.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIPropertyManager.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIRecord.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIRecordManager.h">
+      <Filter>NFCommon\NFCore\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCalendar.h">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCConsistentHash.hpp">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCDataList.h">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFCMemManager.h">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFIDataList.h">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFMapEx.hpp">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFMemoryCounter.h">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFList.hpp">
+      <Filter>NFCommon\NFCore\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFBox.hpp">
+      <Filter>NFCommon\NFCore\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFLine.hpp">
+      <Filter>NFCommon\NFCore\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFPlane.hpp">
+      <Filter>NFCommon\NFCore\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFRay.hpp">
+      <Filter>NFCommon\NFCore\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFSpaceNode.hpp">
+      <Filter>NFCommon\NFCore\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFSphere.hpp">
+      <Filter>NFCommon\NFCore\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFVector2.hpp">
+      <Filter>NFCommon\NFCore\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFCore\NFVector3.hpp">
+      <Filter>NFCommon\NFCore\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\NoahGameFrame\NFComm\NFLogPlugin\NFCLogModule.h">
+      <Filter>NFCommon\NFLogPlugin</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UIDemoLogin.h">
+      <Filter>Classes\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UIDialog.h">
+      <Filter>Classes\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\stdafx.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UIManager.h">
+      <Filter>Classes\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\NFGamePlugin.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Logic\LoginLogic.h">
+      <Filter>Classes\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\UI\UISelectWorld.h">
+      <Filter>Classes\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Logic\NetLogic.h">
+      <Filter>Classes\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Logic\LogicBase.h">
+      <Filter>Classes\Logic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

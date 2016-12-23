@@ -1,0 +1,30 @@
+<Config>
+	<FrameSize>
+		<List0 Name="iPhone" Size="{960, 640}"/>
+		<List1 Name="iPhone 5" Size="{1136, 640}"/>
+		<List2 Name="iPad" Size="{1024, 768}"/>
+		<List3 Name="New iPad" Size="{2048, 1536}"/>
+		<List4 Name="Android Pad 1" Size="{1024, 600}"/>
+		<List5 Name="Android Pad 2" Size="{1280, 800}"/>
+		<List6 Name="Android Phone 1" Size="{800, 480}"/>
+		<List7 Name="Android Phone 2" Size="{854, 480}"/>
+		<List8 Name="Android Phone 3" Size="{1280, 720}"/>
+		<List9 Name="300*200" Size="{300, 200}"/>
+		<List10 Name="480*320" Size="{480, 320}"/>
+		<List11 Name="640*320" Size="{640, 320}"/>
+		<List12 Name="1920*1080" Size="{1920, 1080}"/>
+		<List13 Name="640*640" Size="{640, 640}"/>
+	</FrameSize>
+	<Language>
+		<List0 Name="英语" Type="0"/>
+		<List1 Name="中文" Type="1"/>
+		<List2 Name="法语" Type="2"/>
+		<List3 Name="意大利语" Type="3"/>
+		<List4 Name="俄语" Type="7"/>
+		<List5 Name="韩语" Type="8"/>
+		<List6 Name="日语" Type="9"/>
+		<List7 Name="葡萄牙语" Type="11"/>
+		<List8 Name="阿拉伯语" Type="12"/>
+		<List9 Name="土耳其语" Type="15"/>
+	</Language>
+</Config>
