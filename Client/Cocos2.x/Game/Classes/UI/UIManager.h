@@ -78,7 +78,7 @@ public:
 			(*p)->autorelease();
 		}
 		
-		(*p)->setUserData((void*)customData);
+		(*p)->initData((void*)customData);
 		g_pUIManager->ShowDialog(*p, bPushToHistory);
 	}
 	static void closeUI(const void *customData = nullptr) 

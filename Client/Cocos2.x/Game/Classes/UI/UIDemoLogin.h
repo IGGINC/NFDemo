@@ -13,7 +13,7 @@ public:
 	virtual int getUIPriority() { return 0; }
 
     virtual bool initLayout();
-	virtual void updateData();
+	virtual void initData(void *customData);
 
 private:
 	void OnSocketEvent(const int nSockIndex, const NF_NET_EVENT eEvent, NFINet* pNet);

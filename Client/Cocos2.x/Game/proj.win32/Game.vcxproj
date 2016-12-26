@@ -163,6 +163,12 @@ xcopy /Y /Q "$(ProjectDir)..\..\cocos2d\external\libwebsockets\win32\lib\*.*" "$
     <ClCompile Include="..\Classes\Logic\PlayerLogic.cpp" />
     <ClCompile Include="..\Classes\NFClientPlugin.cpp" />
     <ClCompile Include="..\Classes\NFRoot.cpp" />
+    <ClCompile Include="..\Classes\Scene\Entity\BattleEntity.cpp" />
+    <ClCompile Include="..\Classes\Scene\Entity\BattleEntityPlayer.cpp" />
+    <ClCompile Include="..\Classes\Scene\Entity\EntityAnimation.cpp" />
+    <ClCompile Include="..\Classes\Scene\GameScene.cpp" />
+    <ClCompile Include="..\Classes\Scene\SceneManager.cpp" />
+    <ClCompile Include="..\Classes\Scene\ScenePlugin.cpp" />
     <ClCompile Include="..\Classes\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
     </ClCompile>
@@ -223,6 +229,12 @@ xcopy /Y /Q "$(ProjectDir)..\..\cocos2d\external\libwebsockets\win32\lib\*.*" "$
     <ClInclude Include="..\Classes\Logic\PlayerLogic.h" />
     <ClInclude Include="..\Classes\NFClientPlugin.h" />
     <ClInclude Include="..\Classes\NFRoot.h" />
+    <ClInclude Include="..\Classes\Scene\Entity\BattleEntity.h" />
+    <ClInclude Include="..\Classes\Scene\Entity\BattleEntityPlayer.h" />
+    <ClInclude Include="..\Classes\Scene\Entity\EntityAnimation.h" />
+    <ClInclude Include="..\Classes\Scene\GameScene.h" />
+    <ClInclude Include="..\Classes\Scene\SceneManager.h" />
+    <ClInclude Include="..\Classes\Scene\ScenePlugin.h" />
     <ClInclude Include="..\Classes\stdafx.h" />
     <ClInclude Include="..\Classes\UI\UIDemoLogin.h" />
     <ClInclude Include="..\Classes\UI\UIDialog.h" />

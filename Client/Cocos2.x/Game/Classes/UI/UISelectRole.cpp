@@ -2,6 +2,7 @@
 
 #include "UISelectRole.h"
 #include "Logic\PlayerLogic.h"
+#include "Scene\GameScene.h"
 
 UISelectRole::UISelectRole()
 {
@@ -51,7 +52,7 @@ bool UISelectRole::initLayout()
 	return true;
 }
 
-void UISelectRole::updateData()
+void UISelectRole::initData(void *customData)
 {
 	g_pPlayerLogic->RequireRoleList();
 	m_pRoleList->removeAllItems();
@@ -81,6 +82,8 @@ void UISelectRole::OnRoleSelected(CCObject *pObject , ui::TouchEventType type)
 		auto serverList = g_pPlayerLogic->GetRoleList();
 		int nIndex = m_pRoleList->getIndex((Widget*)pObject);
 		g_pPlayerLogic->RequireEnterGameServer(0);
+		g_pUIManager->CloseDialog();
+		GameScene::showScene();
 	}
 }
 

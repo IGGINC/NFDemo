@@ -34,9 +34,10 @@ bool UIDemoLogin::initLayout()
 	return true;
 }
 
-void UIDemoLogin::updateData()
+void UIDemoLogin::initData(void *customData)
 {
 }
+
 
 void UIDemoLogin::onLoginTouch(CCObject *pObject ,ui::TouchEventType touchType)
 {

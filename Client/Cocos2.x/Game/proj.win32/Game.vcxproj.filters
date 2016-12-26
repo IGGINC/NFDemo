@@ -43,6 +43,12 @@
     <Filter Include="Classes\Logic">
       <UniqueIdentifier>{6018038c-85c3-4cf4-835d-f80d99f0095f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\Scene">
+      <UniqueIdentifier>{04e40701-14a2-4eb4-94c4-0d0772029ca7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Scene\Entity">
+      <UniqueIdentifier>{27f7601b-8aea-4708-9fd9-8059f8352b8a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -155,6 +161,24 @@
     </ClCompile>
     <ClCompile Include="..\Classes\UI\UISelectRole.cpp">
       <Filter>Classes\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\SceneManager.cpp">
+      <Filter>Classes\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\ScenePlugin.cpp">
+      <Filter>Classes\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\GameScene.cpp">
+      <Filter>Classes\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\Entity\EntityAnimation.cpp">
+      <Filter>Classes\Scene\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\Entity\BattleEntity.cpp">
+      <Filter>Classes\Scene\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Scene\Entity\BattleEntityPlayer.cpp">
+      <Filter>Classes\Scene\Entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -325,6 +349,24 @@
     </ClInclude>
     <ClInclude Include="..\Classes\UI\UISelectRole.h">
       <Filter>Classes\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\SceneManager.h">
+      <Filter>Classes\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\ScenePlugin.h">
+      <Filter>Classes\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\GameScene.h">
+      <Filter>Classes\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\Entity\BattleEntityPlayer.h">
+      <Filter>Classes\Scene\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\Entity\EntityAnimation.h">
+      <Filter>Classes\Scene\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Scene\Entity\BattleEntity.h">
+      <Filter>Classes\Scene\Entity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

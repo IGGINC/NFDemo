@@ -6,6 +6,7 @@
 
 #include "UI/UIPlugin.h"
 #include "Logic/LogicPlugin.h"
+#include "Scene/ScenePlugin.h"
 
 #include "UI\UIDemoLogin.h"
 
@@ -50,7 +51,8 @@ bool NFRoot::init()
 
 	CREATE_PLUGIN(pPluginManager, LogicPlugin);
 	CREATE_PLUGIN(pPluginManager, UIPlugin);
-
+	CREATE_PLUGIN(pPluginManager, ScenePlugin);
+	
 	NFCPluginManager::GetSingletonPtr()->Init();
 	NFCPluginManager::GetSingletonPtr()->AfterInit();
 	NFCPluginManager::GetSingletonPtr()->CheckConfig();
@@ -58,7 +60,6 @@ bool NFRoot::init()
 
 	CCFileUtils::sharedFileUtils()->addSearchPath("EditorResources");
 	CCFileUtils::sharedFileUtils()->addSearchPath("EditorResources/ccs");
-
 	IUniqueDialog<UIDemoLogin>::showUI();
 
 	scheduleUpdate();

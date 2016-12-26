@@ -44,7 +44,7 @@ bool UISelectServer::initLayout()
 	return true;
 }
 
-void UISelectServer::updateData()
+void UISelectServer::initData(void *customData)
 {
 	g_pLoginLogic->RequireWorldList();
 	m_pServerList->removeAllItems();

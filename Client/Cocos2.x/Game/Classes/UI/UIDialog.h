@@ -21,13 +21,12 @@ public:
 
 	virtual bool init();
     virtual bool initLayout();
-	virtual void updateData();
+	virtual void initData(void *customData) {};
 	
     virtual void onEnter();
     virtual void onExit();
 
 protected:
-	bool m_bDirty;
 	std::string m_strFileName;
 	ui::Widget *m_pContent;
 };

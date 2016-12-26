@@ -4,7 +4,6 @@
 
 UIDialog::UIDialog()
 	: m_pContent(NULL)
-	, m_bDirty(true)
 {
 }
 
@@ -59,19 +58,9 @@ bool UIDialog::initLayout()
 void UIDialog::onEnter()
 {
 	CCLayer::onEnter();
-
-	if(m_bDirty && m_pContent)
-	{
-		m_bDirty = false;
-		updateData();
-	}
 }
 
 void UIDialog::onExit()
 {
 	CCLayer::onExit();
-}
-
-void UIDialog::updateData()
-{
 }

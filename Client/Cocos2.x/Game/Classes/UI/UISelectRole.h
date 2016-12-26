@@ -13,7 +13,7 @@ public:
 	virtual int getUIPriority() { return 0; }
 
     virtual bool initLayout();
-	virtual void updateData();
+	virtual void initData(void *customData);
 
 private:
 	int OnRoleListEvent(const int nEventID, const NFIDataList& varDataList);
