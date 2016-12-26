@@ -66,4 +66,32 @@ private:
 	std::map<void*, MODULE_EVENT_FUNCTOR*> mModuleEventPrtMap;
 };
 
+#include "NFComm/NFPluginModule/NFILogModule.h"
+#include "NFComm/NFPluginModule/NFIKernelModule.h"
+#include "NFComm/NFPluginModule/NFIClassModule.h"
+#include "NFComm/NFPluginModule/NFIElementModule.h"
+#include "NFComm/NFPluginModule/NFISceneAOIModule.h"
+#include "NFComm/NFPluginModule/NFIScheduleModule.h"
+#include "NFComm/NFPluginModule/NFIEventModule.h"
+#include "NFComm/NFPluginModule/NFIKernelModule.h"
+#include "NFComm/NFPluginModule/NFINetClientModule.hpp"
+
+//class NFIClassModule;
+//class NFIElementModule;
+//class NFILogModule;
+//class NFISceneAOIModule;
+//class NFIKernelModule;
+//class NFIEventModule;
+//class NFIScheduleModule;
+//class NFINetClientModule;
+
+extern NFIClassModule *g_pClassModule;
+extern NFIElementModule *g_pElementModule;
+extern NFILogModule *g_pLogModule;
+extern NFISceneAOIModule *g_pSceneModule;
+extern NFIKernelModule *g_pKernelModule;
+extern NFIEventModule *g_pEventModule;
+extern NFIScheduleModule *g_pScheduleModule;
+extern NFINetClientModule *g_pNetClientModule;
+
 #endif

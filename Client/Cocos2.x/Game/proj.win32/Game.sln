@@ -33,11 +33,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cocos", "cocos", "{18FC6211
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NF", "NF", "{8BD7982F-0294-4AB8-9D38-86206A5D2564}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NFNet", "..\..\..\..\NoahGameFrame\NFComm\NFNet\NFNet.vcxproj", "{403EB74F-6AF5-4250-8DA5-9D3CBFB7E545}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NFNet", "..\..\..\..\..\NoahGameFrame\NFComm\NFNet\NFNet.vcxproj", "{403EB74F-6AF5-4250-8DA5-9D3CBFB7E545}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NFDep", "NFDep", "{BDAEB36C-319D-4E2B-A306-A0356F07D80A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotobuf", "..\..\..\..\NoahGameFrame\Dependencies\protobuf\vsprojects\libprotobuf.vcxproj", "{3E283F37-A4ED-41B7-A3E6-A2D89D131A30}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotobuf", "..\..\..\..\..\NoahGameFrame\Dependencies\protobuf\vsprojects\libprotobuf.vcxproj", "{3E283F37-A4ED-41B7-A3E6-A2D89D131A30}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NFMessageDefine", "..\..\..\..\Common\NFMessageDefine\NFMessageDefine.vcxproj", "{3D9DB426-BA46-450B-BBAC-DABB6B6D69DE}"
 	ProjectSection(ProjectDependencies) = postProject

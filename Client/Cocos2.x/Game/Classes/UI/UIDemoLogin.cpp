@@ -4,7 +4,7 @@
 #include "Logic\LoginLogic.h"
 #include "Logic\NetLogic.h"
 
-#include "UISelectWorld.h"
+#include "UISelectServer.h"
 
 UIDemoLogin::UIDemoLogin()
 {
@@ -42,26 +42,13 @@ void UIDemoLogin::onLoginTouch(CCObject *pObject ,ui::TouchEventType touchType)
 {
 	if(touchType == ui::TouchEventType::TOUCH_EVENT_ENDED)
 	{		
-		NFMsg::ReqAccountLogin xMsg;
-		xMsg.set_security_code("");
-		xMsg.set_signbuff("");
-		xMsg.set_clientversion(1);
-		xMsg.set_loginmode(0);
-		xMsg.set_clientip(0);
-		xMsg.set_clientip(0);
-		xMsg.set_clientmac(0);
-		xMsg.set_device_info("");
-		xMsg.set_extra_info("");
 
-		xMsg.set_account(m_pUserName->getStringValue());
-		xMsg.set_password(m_pUserPWD->getStringValue());
-
-		g_pNetLogic->SendToServerByPB(NFMsg::EGameMsgID::EGMI_REQ_LOGIN, xMsg);
+		g_pLoginLogic->LoginPB(m_pUserName->getStringValue(), m_pUserPWD->getStringValue(), "");
 	}
 }
 
 int UIDemoLogin::OnLoginEvent(const int nEventID, const NFIDataList& varDataList)
 {
-	UISelectWorld::showUI();
+	UISelectServer::showUI();
 	return 0;
 }

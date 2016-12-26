@@ -1,9 +1,11 @@
 #include "stdafx.h"
 
 #include "NFRoot.h"
+#include "NFClientPlugin.h"
+#include "NFComm/NFPluginLoader/NFCPluginManager.h"
 
-#include "NFComm\NFPluginLoader\NFCPluginManager.h"
-#include "NFGamePlugin.h"
+#include "UI/UIPlugin.h"
+#include "Logic/LogicPlugin.h"
 
 #include "UI\UIDemoLogin.h"
 
@@ -44,7 +46,10 @@ bool NFRoot::init()
 
 	pPluginManager->SetAppName("GameClient");
 
-	CREATE_PLUGIN(pPluginManager, NFGamePlugin);
+	CREATE_PLUGIN(pPluginManager, NFClientPlugin);
+
+	CREATE_PLUGIN(pPluginManager, LogicPlugin);
+	CREATE_PLUGIN(pPluginManager, UIPlugin);
 
 	NFCPluginManager::GetSingletonPtr()->Init();
 	NFCPluginManager::GetSingletonPtr()->AfterInit();

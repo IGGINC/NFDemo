@@ -15,6 +15,8 @@ enum LoginLogicEvent
 {
 	E_LoginEvent_LoginSuccess,
 	E_LoginEvent_WorldList,
+	E_LoginEvent_ServerList,
+	E_LoginEvent_RoleList,
 };
 
 class CLoginLogic
@@ -44,6 +46,8 @@ public:
 	void RequireServerList();
 	void RequireSelectServer(int nServerID);
 
+	void RequireRoleList();
+
 	// 接收消息
 private:
 	void OnLoginProcess(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
@@ -54,11 +58,14 @@ private:
 
 public:
 	std::vector<NFMsg::ServerInfo> GetWorldList() { return m_WorldServerList; }
-	std::vector<NFMsg::ServerInfo> GetGateList() { return m_GameServerList; }
+	std::vector<NFMsg::ServerInfo> GetServerList() { return m_GameServerList; }
+	const std::string& GetAccount() { return m_strAccount; }
+	int GetServerID() { return m_nServerID; }
 
 private:
 	std::string m_strAccount;
 	std::string m_strKey;
+	int m_nServerID;
 	std::vector<NFMsg::ServerInfo> m_WorldServerList;
 	std::vector<NFMsg::ServerInfo> m_GameServerList;
 };

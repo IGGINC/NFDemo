@@ -35,12 +35,12 @@ bool CLoginLogic::Execute()
 
 bool CLoginLogic::AfterInit()
 {
+	CLogicBase::AfterInit();
 	g_pNetLogic->AddReceiveCallBack(NFMsg::EGMI_ACK_LOGIN, this, &CLoginLogic::OnLoginProcess);
 	g_pNetLogic->AddReceiveCallBack(NFMsg::EGMI_ACK_WORLD_LIST, this, &CLoginLogic::OnWorldList);
 	g_pNetLogic->AddReceiveCallBack(NFMsg::EGMI_ACK_CONNECT_WORLD, this, &CLoginLogic::OnConnectWorld);
 	g_pNetLogic->AddReceiveCallBack(NFMsg::EGMI_ACK_CONNECT_KEY, this, &CLoginLogic::OnConnectKey);
 	g_pNetLogic->AddReceiveCallBack(NFMsg::EGMI_ACK_SELECT_SERVER, this, &CLoginLogic::OnSelectServer);
-
     return true;
 }
 //--------------------------------------------发消息-------------------------------------------------------------
@@ -75,6 +75,7 @@ void CLoginLogic::RequireWorldList()
 
 void CLoginLogic::RequireConnectWorld(int nWorldID)
 {
+	m_nServerID = nWorldID;
 	NFMsg::ReqConnectWorld xMsg;
 	xMsg.set_world_id(nWorldID);
 	g_pNetLogic->SendToServerByPB(NFMsg::EGameMsgID::EGMI_REQ_CONNECT_WORLD, xMsg);
@@ -108,11 +109,11 @@ void CLoginLogic::RequireServerList()
 
 void CLoginLogic::RequireSelectServer(int nServerID)
 {
+	m_nServerID = nServerID;
 	NFMsg::ReqSelectServer xMsg;
 	xMsg.set_world_id(nServerID);
 	g_pNetLogic->SendToServerByPB(NFMsg::EGameMsgID::EGMI_REQ_SELECT_SERVER, xMsg);
 }
-
 //--------------------------------------------收消息-------------------------------------------------------------
 void CLoginLogic::OnLoginProcess(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen)
 {
@@ -151,6 +152,7 @@ void CLoginLogic::OnWorldList(const int nSockIndex, const int nMsgID, const char
 		{
 			m_WorldServerList[i] = xMsg.info(i);
 		}
+		DoEvent(E_LoginEvent_WorldList, NFCDataList());
 	}
 	else if(xMsg.type() == NFMsg::RSLT_GAMES_ERVER)
 	{
@@ -160,8 +162,8 @@ void CLoginLogic::OnWorldList(const int nSockIndex, const int nMsgID, const char
 		{
 			m_GameServerList[i] = xMsg.info(i);
 		}
+		DoEvent(E_LoginEvent_ServerList, NFCDataList());
 	}
-	DoEvent(E_LoginEvent_WorldList, NFCDataList());
 }
 
 void CLoginLogic::OnConnectWorld(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen)

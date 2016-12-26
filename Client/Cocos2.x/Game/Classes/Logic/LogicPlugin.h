@@ -1,22 +1,22 @@
 // -------------------------------------------------------------------------
-//    @FileName			:    NFGamePlugin.h
+//    @FileName			:    LogicPlugin.h
 //    @Author           :    Johance
-//    @Date             :    2016-12-22
-//    @Module           :    NFGamePlugin
+//    @Date             :    2016-12-26
+//    @Module           :    LogicPlugin
 //
 // -------------------------------------------------------------------------
 
-#ifndef NFC_GAMEPLUGIN_H
-#define NFC_GAMEPLUGIN_H
+#ifndef LOGIC_PLUGIN_H
+#define LOGIC_PLUGIN_H
 
 #include "NFComm/NFPluginModule/NFIPlugin.h"
 #include "NFComm/NFPluginModule/NFIPluginManager.h"
 
 
-class NFGamePlugin : public NFIPlugin
+class LogicPlugin : public NFIPlugin
 {
 public:
-    NFGamePlugin(NFIPluginManager* p)
+    LogicPlugin(NFIPluginManager* p)
     {
         pPluginManager = p;
     }

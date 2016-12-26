@@ -47,12 +47,9 @@ protected:
 
 protected:	
 	std::list<std::pair<int, std::string>> m_listDelayMsg;
-	NFINetClientModule* m_pNetClientModule;
-	NFILogModule* m_pLogModule;
 	bool m_bSocketReady;
 };
 
 #define g_pNetLogic (CNetLogic::Instance())
-#define g_pNetClientModule (CNetLogic::Instance()->GetNetModule())
 
 #endif

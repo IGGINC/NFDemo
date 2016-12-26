@@ -23,6 +23,8 @@ using namespace cocos2d;
 
 using namespace cocos2d::extension;
 
+using namespace cocos2d::ui;
+
 using namespace CocosDenshion;
 
 using namespace std;

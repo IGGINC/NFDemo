@@ -12,7 +12,6 @@
 
 bool CNetLogic::Init()
 {
-	m_pNetClientModule = NULL;
     return true;
 }
 
@@ -35,10 +34,9 @@ bool CNetLogic::Execute()
 
 bool CNetLogic::AfterInit()
 {
-    m_pLogModule = pPluginManager->FindModule<NFILogModule>();
-	m_pNetClientModule = pPluginManager->FindModule<NFINetClientModule>();
-	m_pNetClientModule->AddEventCallBack(this, &CNetLogic::OnSocketEvent);
-	m_pNetClientModule->AddReceiveCallBack(this, &CNetLogic::OnMsgRecive);
+	CLogicBase::AfterInit();
+	g_pNetClientModule->AddEventCallBack(this, &CNetLogic::OnSocketEvent);
+	g_pNetClientModule->AddReceiveCallBack(this, &CNetLogic::OnMsgRecive);
 
 	g_pNetLogic->AddReceiveCallBack(NFMsg::EGMI_EVENT_RESULT, this, &CNetLogic::OnEventResult);
 
@@ -55,14 +53,14 @@ void CNetLogic::ConnectServer(const std::string strIp, int nPort)
 	xServerData.strIP = strIp;
 	xServerData.nPort = nPort;
 
-	m_pNetClientModule->AddServer(xServerData);
+	g_pNetClientModule->AddServer(xServerData);
 }
 
 void CNetLogic::SendToServerByPB(const uint16_t nMsgID, google::protobuf::Message& xData)
 {
 	if(m_bSocketReady)
 	{
-		m_pNetClientModule->SendToAllServerByPB(nMsgID, xData);
+		g_pNetClientModule->SendToAllServerByPB(nMsgID, xData);
 	}
 	else
 	{
@@ -79,35 +77,35 @@ void CNetLogic::SendToServerByPB(const uint16_t nMsgID, google::protobuf::Messag
 
 NFINetClientModule *CNetLogic::GetNetModule()
 {	
-	if(!m_pNetClientModule)
-		m_pNetClientModule = pPluginManager->FindModule<NFINetClientModule>();
-	return m_pNetClientModule;
+	if(!g_pNetClientModule)
+		g_pNetClientModule = pPluginManager->FindModule<NFINetClientModule>();
+	return g_pNetClientModule;
 }
 
 void CNetLogic::OnSocketEvent(const int nSockIndex, const NF_NET_EVENT eEvent, NFINet* pNet)
 {
     if (eEvent & NF_NET_EVENT_EOF)
     {
-        m_pLogModule->LogNormal(NFILogModule::NLL_INFO_NORMAL, NFGUID(0, nSockIndex), "NF_NET_EVENT_EOF", "Connection closed", __FUNCTION__, __LINE__);
+        g_pLogModule->LogNormal(NFILogModule::NLL_INFO_NORMAL, NFGUID(0, nSockIndex), "NF_NET_EVENT_EOF", "Connection closed", __FUNCTION__, __LINE__);
     }
     else if (eEvent & NF_NET_EVENT_ERROR)
     {
-        m_pLogModule->LogNormal(NFILogModule::NLL_INFO_NORMAL, NFGUID(0, nSockIndex), "NF_NET_EVENT_ERROR", "Got an error on the connection", __FUNCTION__, __LINE__);
+        g_pLogModule->LogNormal(NFILogModule::NLL_INFO_NORMAL, NFGUID(0, nSockIndex), "NF_NET_EVENT_ERROR", "Got an error on the connection", __FUNCTION__, __LINE__);
     }
     else if (eEvent & NF_NET_EVENT_TIMEOUT)
     {
-        m_pLogModule->LogNormal(NFILogModule::NLL_INFO_NORMAL, NFGUID(0, nSockIndex), "NF_NET_EVENT_TIMEOUT", "read timeout", __FUNCTION__, __LINE__);
+        g_pLogModule->LogNormal(NFILogModule::NLL_INFO_NORMAL, NFGUID(0, nSockIndex), "NF_NET_EVENT_TIMEOUT", "read timeout", __FUNCTION__, __LINE__);
     }
     else  if (eEvent == NF_NET_EVENT_CONNECTED)
     {
-        m_pLogModule->LogNormal(NFILogModule::NLL_INFO_NORMAL, NFGUID(0, nSockIndex), "NF_NET_EVENT_CONNECTED", "connectioned success", __FUNCTION__, __LINE__);
+        g_pLogModule->LogNormal(NFILogModule::NLL_INFO_NORMAL, NFGUID(0, nSockIndex), "NF_NET_EVENT_CONNECTED", "connectioned success", __FUNCTION__, __LINE__);
 		m_bSocketReady = true;
 
 		while(m_listDelayMsg.size() > 0)
 		{
 			auto msg = m_listDelayMsg.front();
 
-			m_pNetClientModule->SendToAllServer(msg.first, msg.second);
+			g_pNetClientModule->SendToAllServer(msg.first, msg.second);
 
 			m_listDelayMsg.pop_front();
 		}
