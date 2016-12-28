@@ -37,4 +37,5 @@ void BattleEntityPlayer::OnAnimationCreate(EntityAnimation* pNode)
 
 void BattleEntityPlayer::update(float dt)
 {
+	BattleEntity::update(dt);
 }

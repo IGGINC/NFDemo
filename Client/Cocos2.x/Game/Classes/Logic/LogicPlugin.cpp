@@ -11,6 +11,8 @@
 
 #include "LoginLogic.h"
 #include "PlayerLogic.h"
+#include "PropertyLogic.h"
+#include "RecordLogic.h"
 #include "NetLogic.h"
 
 const int LogicPlugin::GetPluginVersion()
@@ -29,6 +31,8 @@ void LogicPlugin::Install()
 	REGISTER_MODULE(pPluginManager, CNetLogic, CNetLogic)
 	REGISTER_MODULE(pPluginManager, CLoginLogic, CLoginLogic)
 	REGISTER_MODULE(pPluginManager, CPlayerLogic, CPlayerLogic)
+	REGISTER_MODULE(pPluginManager, CPropertyLogic, CPropertyLogic)
+	REGISTER_MODULE(pPluginManager, CRecordLogic, CRecordLogic)
 }
 
 void LogicPlugin::Uninstall()
@@ -36,4 +40,6 @@ void LogicPlugin::Uninstall()
 	UNREGISTER_MODULE(pPluginManager, CNetLogic, CNetLogic)
 	UNREGISTER_MODULE(pPluginManager, CLoginLogic, CLoginLogic)
 	UNREGISTER_MODULE(pPluginManager, CPlayerLogic, CPlayerLogic)
+	UNREGISTER_MODULE(pPluginManager, CPropertyLogic, CPropertyLogic)
+	UNREGISTER_MODULE(pPluginManager, CRecordLogic, CRecordLogic)
 }

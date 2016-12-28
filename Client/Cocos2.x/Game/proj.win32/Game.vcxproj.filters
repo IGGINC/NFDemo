@@ -180,6 +180,12 @@
     <ClCompile Include="..\Classes\Scene\Entity\BattleEntityPlayer.cpp">
       <Filter>Classes\Scene\Entity</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Logic\PropertyLogic.cpp">
+      <Filter>Classes\Logic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Logic\RecordLogic.cpp">
+      <Filter>Classes\Logic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -367,6 +373,12 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Scene\Entity\BattleEntity.h">
       <Filter>Classes\Scene\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Logic\PropertyLogic.h">
+      <Filter>Classes\Logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Logic\RecordLogic.h">
+      <Filter>Classes\Logic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

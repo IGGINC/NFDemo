@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Logic/NetLogic.h"
+#include "Logic/PlayerLogic.h"
 #include "../../../../Common/NFMessageDefine/NFProtocolDefine.hpp"
 #include "GameScene.h"
 
@@ -45,4 +46,25 @@ int GameScene::OnObjectClassEvent(const NFGUID& self, const std::string& strClas
     }
 
     return 0;
+}
+
+bool GameScene::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent)
+{
+	CCPoint pos = this->convertTouchToNodeSpace(pTouch);
+
+	g_pPlayerLogic->RequireMove(NFVector3(pos.x, pos.y, 0));
+
+	return true;
+}
+
+void GameScene::ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent)
+{
+}
+
+void GameScene::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
+{
+}
+
+void GameScene::ccTouchCancelled(CCTouch *pTouch, CCEvent *pEvent)
+{
 }

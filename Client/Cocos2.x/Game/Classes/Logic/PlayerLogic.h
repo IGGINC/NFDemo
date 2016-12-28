@@ -41,36 +41,17 @@ public:
 	void RequireRoleList();
 	void RequireCreateRole(string strRoleName, int byCareer, int bySex);
 	void RequireEnterGameServer(int nRoleIndex);
+	void RequireMove(NFVector3 pos);
 
 	// 接收消息
 private:
 	void OnRoleList(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-
 	// 进入和离开
 	void OnObjectEntry(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
 	void OnObjectLeave(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-
 	// 移动
 	void OnObjectMove(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
 	void OnObjectJump(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-
-	// 属性
-	void OnPropertyInt(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnPropertyFloat(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnPropertyString(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnPropertyObject(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-
-	// 数据
-	void OnRecordInt(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnRecordFloat(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnRecordString(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnRecordObject(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnSwapRow(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnAddRow(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnRemoveRow(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	
-	void OnObjectRecordEntry(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
-	void OnObjectPropertyEntry(const int nSockIndex, const int nMsgID, const char* msg, const uint32_t nLen);
 
 private:
 	void AddRecord(const NF_SHARE_PTR<NFIObject>& object, const std::string &strRecordName, const NFMsg::RecordAddRowStruct &data);

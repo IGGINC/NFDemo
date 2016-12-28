@@ -40,7 +40,7 @@ void EntityAnimationArmature::Play(const char *pAnimName, bool bLoop/* = true*/,
     if (m_pAnimationNode)
     {
         CCArmature* armatureAnimation = (CCArmature*)m_pAnimationNode;
-        armatureAnimation->getAnimation()->play(pAnimName, -1, -1, bLoop ? 0 : 1);
+        armatureAnimation->getAnimation()->play(pAnimName, -1, -1, bLoop ? -1 : 0);
 
 		m_endFun = endFun;
 

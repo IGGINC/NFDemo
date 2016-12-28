@@ -161,6 +161,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\cocos2d\external\libwebsockets\win32\lib\*.*" "$
     <ClCompile Include="..\Classes\Logic\LoginLogic.cpp" />
     <ClCompile Include="..\Classes\Logic\NetLogic.cpp" />
     <ClCompile Include="..\Classes\Logic\PlayerLogic.cpp" />
+    <ClCompile Include="..\Classes\Logic\PropertyLogic.cpp" />
+    <ClCompile Include="..\Classes\Logic\RecordLogic.cpp" />
     <ClCompile Include="..\Classes\NFClientPlugin.cpp" />
     <ClCompile Include="..\Classes\NFRoot.cpp" />
     <ClCompile Include="..\Classes\Scene\Entity\BattleEntity.cpp" />
@@ -227,6 +229,8 @@ xcopy /Y /Q "$(ProjectDir)..\..\cocos2d\external\libwebsockets\win32\lib\*.*" "$
     <ClInclude Include="..\Classes\Logic\LoginLogic.h" />
     <ClInclude Include="..\Classes\Logic\NetLogic.h" />
     <ClInclude Include="..\Classes\Logic\PlayerLogic.h" />
+    <ClInclude Include="..\Classes\Logic\PropertyLogic.h" />
+    <ClInclude Include="..\Classes\Logic\RecordLogic.h" />
     <ClInclude Include="..\Classes\NFClientPlugin.h" />
     <ClInclude Include="..\Classes\NFRoot.h" />
     <ClInclude Include="..\Classes\Scene\Entity\BattleEntity.h" />
